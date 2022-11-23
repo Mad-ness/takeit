@@ -1,0 +1,26 @@
+[package]
+name = "takeit"
+version = "0.1.6"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = { version = "0.6.0-rc.5", features = ["json", "original-uri", "query", "matched-path"] }
+clap = { version = "4.0.22", features = ["derive"] }
+http = "0.2.8"
+hyper = "0.14.23"
+# futures = "0.3.25"
+json-patch = "0.2.6"
+serde = { version = "1.0.147", features = ["derive"] }
+serde_json = "1.0.87"
+serde_yaml = "0.9.14"
+tokio = { version = "1.21.2", features = ["full", "sync"] }
+tower = "0.4.13"
+tower-http = { version = "0.3.4", features = ["trace", "compression-gzip"] }
+tracing = { version = "0.1.37", default-features = false, features = ["std"] }
+tracing-subscriber = { version = "0.3.16", default-features = false, features = ["smallvec", "parking_lot", "fmt", "ansi", "tracing-log"] }
+walkdir = "2.3.2"
+
+[profiles.release]
+strip = true
