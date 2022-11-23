@@ -396,7 +396,7 @@ where
 #[cfg(test)]
 mod test {
     use std::collections::HashMap;
-    use crate::documentv2::{
+    use crate::collection::document::{
         Document, normalize_override_key, normalize_attrs,
         build_compare_key
     };
